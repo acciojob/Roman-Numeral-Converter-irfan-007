@@ -16,6 +16,14 @@ function convertToRoman(num) {
     };
 
   //your code here
+	var rom="";
+	for(let i in obj){
+		while(num>=i[1]){
+			rom+=i[0];
+			num-=i[1];
+		}
+	}
+	return rom;
 
 }
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
