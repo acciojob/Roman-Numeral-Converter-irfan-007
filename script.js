@@ -9,7 +9,7 @@ function convertToRoman(num) {
       6:['L', 50], 
       7:['XL', 40], 
       8:['X', 10], 
-      9:['IV', 9], 
+      9:['IX', 9], 
       10:['V', 5], 
       11:['IV', 4], 
       12:['I', 1]
@@ -18,17 +18,17 @@ function convertToRoman(num) {
   //your code here
 	var rom="";
 	for(let i in obj){
-		while(num>=i[1]){
-			rom+=i[0];
-			num-=i[1];
+		while(num>=obj[i][1]){
+			rom+=obj[i][0];
+			num-=obj[i][1];
 		}
 	}
 	return rom;
-
 }
+
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
 
-// console.log(convertToRoman(36));
+console.log(convertToRoman(36));
 
 
 
